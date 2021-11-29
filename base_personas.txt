@@ -5,7 +5,8 @@
         "email": "kaksk@gmail.com",
         "salary": "8338",
         "phone": "28393",
-        "address": "kskaska"
+        "address": "kskaska",
+        "dui": "0189292"
     },
     {
         "name": "Sofia",
@@ -13,7 +14,8 @@
         "email": "kasksak@gmail.com",
         "salary": "388",
         "phone": "838383",
-        "address": "kskskss"
+        "address": "kskskss",
+        "dui": "01339292"
     },
     {
         "name": "Tito",
@@ -21,14 +23,16 @@
         "email": "kksks@gmail.com",
         "salary": "8383",
         "phone": "8383838",
-        "address": "jajsjj"
+        "address": "jajsjj",
+        "dui": "0304292"
     },
     {
-        "name": "Santiago",
+        "name": "Sandra",
         "last_name": "Velasquz",
         "email": "ksksk@gmail.com",
         "salary": "3993",
         "phone": "743211",
-        "address": "ksksks"
+        "address": "ksksks",
+        "dui": "9922222222"
     }
 ]
