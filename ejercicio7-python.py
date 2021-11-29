@@ -7,10 +7,17 @@ file_name = 'base_personas.txt'
 #manejo de lista, si hay registros los va imprimir si no no
 
 def load_data():
-    #cargar en memoria
+    #cargar en memoria    r= segnifica lectura
     base =open(file_name, 'r')
     json_object = json.load(base)
     return list(json_object)
+
+#Reescribir en los campos del archivo creado    w= significa escritura
+def write_to_file():
+    json_object = json.dumps(persons, indent=4)
+    with open(file_name, 'w') as base:
+        base.write(json_object)
+        base.close()
 
 
 def list_person():
@@ -60,6 +67,41 @@ def add_person():
         os.system('pause')
 
 
+
+def refresh_person():
+    modificar =""
+    os.system('cls')
+    dui_persona = input('Ingrese el DUI de la persona a modificar: ')
+    for i in persons:
+        if dui_persona == i['dui']:
+            modificar = input('¿Desea modificar dato? (si/no): ')    
+            if modificar == 'si':
+                name =  input('Ingrese nombre: ')    
+                i['name'] =  name if name != "" else i['name']
+                apellido = input('Ingrese apellido: ')  
+                i['last_name'] =  apellido if apellido != "" else i['last_name']
+                correo = input('Ingrese nuevoa dirección de correo: ')
+                i['email'] = correo if correo != "" else i['email']
+                salario = input('Ingrese valor de salario: ')
+                i['salary'] = salario if salario != "" else i['salary']
+                telefono = input('Ingrese numero de telefono: ')
+                i['phone'] = telefono if telefono != "" else i['phone']
+                direccion = input('Ingrese nueva dirección: ')
+                i['address'] = direccion if direccion != "" else i['address']
+                dui = input('Ingrese número de DUI: ')
+                i['dui'] = dui if dui != "" else i['dui']
+                write_to_file()
+                print('campo modificado')
+                os.system('pause')
+                return 
+            else:
+                return
+
+
+
+
+
+
 def delete_person():
     os.system('cls')
     dui = input('Ingrese el DUI de la persona: ')
@@ -74,6 +116,8 @@ def delete_person():
 
 
 
+
+
 op = ''
 persons = load_data()
 while(op != 'exit'):
@@ -81,7 +125,8 @@ while(op != 'exit'):
     print('------- Menu -------')
     print('(1)..... Listar personas')
     print('(2)..... Agregar personas')
-    print('(3)..... eliminar persina')
+    print('(3)..... Modificar datos de personas')
+    print('(4)..... eliminar persina')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -90,6 +135,8 @@ while(op != 'exit'):
     elif op == '2':
         add_person()
     elif op == '3':
+        refresh_person()         
+    elif op == '4':
         delete_person()
     elif op == 'exit':
         print('Fin del programa')
