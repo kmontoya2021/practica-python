@@ -6,7 +6,8 @@
         "salary": "8338",
         "phone": "28393",
         "address": "kskaska",
-        "dui": "0189292"
+        "dui": "0189292",
+        "date": "02/03/2012"
     },
     {
         "name": "Sofia",
@@ -15,7 +16,8 @@
         "salary": "388",
         "phone": "838383",
         "address": "kskskss",
-        "dui": "01339292"
+        "dui": "01339292",
+        "date": "2/03/2012"
     },
     {
         "name": "Tito",
@@ -24,7 +26,8 @@
         "salary": "8383",
         "phone": "8383838",
         "address": "jajsjj",
-        "dui": "0304292"
+        "dui": "0304292",
+        "date": "14/03/2012"
     },
     {
         "name": "Sandra",
@@ -33,6 +36,7 @@
         "salary": "3993",
         "phone": "743211",
         "address": "ksksks",
-        "dui": "9922222222"
+        "dui": "9922222222",
+        "date": "24/03/2012"
     }
 ]
