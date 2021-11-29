@@ -52,7 +52,8 @@ def add_person():
                  'salary': salary,
                  'phone' : phone,
                  'address' : address,
-                 'dui': dui
+                 'dui': dui,
+                 'date': date
 
                  }
 
@@ -113,7 +114,7 @@ def delete_person():
 
 def show_person():
     os.system('cls')
-    dui = input('Ingrese el nombre')
+    dui = input('Ingrese el dui')
     for person in persons:
         if person['dui'] == dui:
             print('----- información ------')
