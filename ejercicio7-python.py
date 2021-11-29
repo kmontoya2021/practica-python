@@ -54,7 +54,8 @@ def add_person():
                  'address' : address,
                  'dui': dui
 
-        }
+                 }
+
         persons.append(person)
         #este es un adaptador
         #json_oject en formato json para que lo pueda reconocer los valores
@@ -98,10 +99,6 @@ def refresh_person():
                 return
 
 
-
-
-
-
 def delete_person():
     os.system('cls')
     dui = input('Ingrese el DUI de la persona: ')
@@ -114,8 +111,23 @@ def delete_person():
                 print('Persona eliminada...')
     os.system('pause')
 
-
-
+def show_person():
+    dui = input('Ingrese el nombre')
+    for person in persons:
+        if person['dui'] == dui:
+            print('----- información ------')
+            print('Nombre: ', person['name'])
+            print('Apellido: ', person['last_name'])
+            print('Correo: ', person['email'])
+            print('Salario: ', person['salary'])
+            print('Telefono: ', person['phone'])
+            print('Dierección: ', person['address'])
+            print('Dui ', person['dui'])
+            print('Fecha de ingreso: ', person['date'])
+            os.system('pause')
+            return
+    print('Persona no encontrada')
+    os.system('pause')
 
 
 op = ''
@@ -125,8 +137,9 @@ while(op != 'exit'):
     print('------- Menu -------')
     print('(1)..... Listar personas')
     print('(2)..... Agregar personas')
-    print('(3)..... Modificar datos de personas')
-    print('(4)..... eliminar persina')
+    print('(3)..... Modificar datos de persona')
+    print('(4)..... eliminar persona')
+    print('(5)..... Mostrar persona')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -138,6 +151,8 @@ while(op != 'exit'):
         refresh_person()         
     elif op == '4':
         delete_person()
+    elif op == '5':
+        show_person()
     elif op == 'exit':
         print('Fin del programa')
     else:
