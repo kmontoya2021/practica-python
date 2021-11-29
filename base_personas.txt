@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Carla",
+        "last_name": "Perez",
+        "email": "kaksk@gmail.com",
+        "salary": "8338",
+        "phone": "28393",
+        "address": "kskaska"
+    },
+    {
+        "name": "Sofia",
+        "last_name": "Torres ",
+        "email": "kasksak@gmail.com",
+        "salary": "388",
+        "phone": "838383",
+        "address": "kskskss"
+    },
+    {
+        "name": "Tito",
+        "last_name": "Mendez",
+        "email": "kksks@gmail.com",
+        "salary": "8383",
+        "phone": "8383838",
+        "address": "jajsjj"
+    },
+    {
+        "name": "Santiago",
+        "last_name": "Velasquz",
+        "email": "ksksk@gmail.com",
+        "salary": "3993",
+        "phone": "743211",
+        "address": "ksksks"
+    }
+]

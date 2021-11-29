@@ -8,6 +8,7 @@ print(nombre)
 #definir varias variables
 
 x, book = 100, "Robot"
+
 print(x, book)
 
 #convencion
