@@ -112,6 +112,7 @@ def delete_person():
     os.system('pause')
 
 def show_person():
+    os.system('cls')
     dui = input('Ingrese el nombre')
     for person in persons:
         if person['dui'] == dui:
