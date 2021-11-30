@@ -1,5 +1,6 @@
 import os
 import json
+import datetime
 
 #esta es una lista vacía
 persons = []
@@ -131,6 +132,14 @@ def show_person():
     print('Persona no encontrada')
     os.system('pause')
 
+def update_fecha():
+    x = datetime.datetime.now()
+    for person in persons:
+        person['date'] = x.strftime('%d-%m-%y')
+        write_to_file()
+    print('Se han actualizado las fechas de los registros')
+    os.system('pause')  
+
 
 op = ''
 persons = load_data()
@@ -142,6 +151,7 @@ while(op != 'exit'):
     print('(3)..... Modificar datos de persona')
     print('(4)..... eliminar persona')
     print('(5)..... Mostrar persona')
+    print('(6)..... Actualizar fecha')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -155,6 +165,8 @@ while(op != 'exit'):
         delete_person()
     elif op == '5':
         show_person()
+    elif op == '6':
+        update_fecha()
     elif op == 'exit':
         print('Fin del programa')
     else:
