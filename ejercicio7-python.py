@@ -1,6 +1,7 @@
 import os
 import json
 import datetime
+import requests
 
 #esta es una lista vacía
 persons = []
@@ -140,6 +141,19 @@ def update_fecha():
     print('Se han actualizado las fechas de los registros')
     os.system('pause')  
 
+def get_data():
+    data = requests.get('https://jsonplaceholder.typicode.com/users/')
+    if data.status_code == 200:
+        users = list(json.loads(data.text))
+        for user in users:
+            print(user['id'], user['name'])
+            print (user['id'], 'Nombre: ', user ['name'].split(' ')[0])
+            print (user['id'], 'Apellido: ', user ['name'].split(' ')[1])
+    else:
+        print('Eror de conexión')
+        os.system('PAUSE')
+
+
 
 op = ''
 persons = load_data()
@@ -152,6 +166,7 @@ while(op != 'exit'):
     print('(4)..... eliminar persona')
     print('(5)..... Mostrar persona')
     print('(6)..... Actualizar fecha')
+    print('(7)..... carga de datos en la web')
     print('(exit).. Salir')
     print('\n')
     op = input('Ingrese una opción: ')
@@ -167,6 +182,8 @@ while(op != 'exit'):
         show_person()
     elif op == '6':
         update_fecha()
+    elif op == '7':
+        get_data()
     elif op == 'exit':
         print('Fin del programa')
     else:
